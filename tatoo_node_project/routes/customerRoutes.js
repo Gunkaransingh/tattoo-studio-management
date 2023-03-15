@@ -33,6 +33,7 @@ const storage = multer.diskStorage({
 //  register and login routes in customer panel starts 
 router.post('/userRegister',UserController.userRegister)
 router.post('/userLogin',UserController.userLogin)
+router.use(require('../common/customer_middleware'))
 // register and login routes in customer panel ends 
 
 

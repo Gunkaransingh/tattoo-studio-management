@@ -7,7 +7,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 
 const routes: Routes = [
-  {path:'admin',component:AdminLoginComponent},
+  {path:'adminLogin',component:AdminLoginComponent},
   {path:'layout',component:LayoutComponent,children:[
     {path:'header',component:HeaderComponent},
     {path:'gallery',component:GalleryComponent},

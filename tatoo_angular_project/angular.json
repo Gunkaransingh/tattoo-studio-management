@@ -30,9 +30,10 @@
               "src/assets/css/prettyPhoto.css",
               "src/assets/css/responsive.css",
               "src/assets/css/animate.css",
-              "src/assets/css/font-awesome.min.css",
-              "src/assets/css/bootstrap.min.css"
-             
+              "node_modules/ngx-toastr/toastr.css"
+           
+              
+           
             ],
             "scripts": [
               "src/assets/js/jquery-1.11.1.min.js",
@@ -108,8 +109,10 @@
               "src/assets/css/prettyPhoto.css",
               "src/assets/css/responsive.css",
               "src/assets/css/animate.css",
-              "src/assets/css/font-awesome.min.css",
-              "src/assets/css/bootstrap.min.css"
+              "node_modules/ngx-toastr/toastr.css"
+          
+           
+          
             ],
             "scripts": [
               "src/assets/js/jquery-1.11.1.min.js",

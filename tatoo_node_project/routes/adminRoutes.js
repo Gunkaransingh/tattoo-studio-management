@@ -4,7 +4,7 @@ const galleryController=require('../apis/gallery/galleryController')
 const tattooPricingController=require('../apis/tattoo_pricing/tattoo_pricingController')
 const ReviewController=require('../apis/reviews/reviewsController')
 const BookingController=require('../apis/booking/bookingController')
-
+const UserController=require('../apis/user/userController')
 const multer = require('multer')
 const path = require('path')
 
@@ -29,6 +29,11 @@ router.get('/',(req,res)=>{
   
     console.log('chedck')
 })
+// admin routes 
+router.post('/adminLogin',UserController.userLogin)
+router.use(require('../common/admin_middleware'))
+
+
 // tattoo category routes in admin panel starts 
 
 router.post('/addTattoosCategory',tattoosUpload.single('tattoo_image'),tattooCategoryController.addTattoosCategory)

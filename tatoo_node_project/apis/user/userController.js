@@ -73,6 +73,7 @@ userRegister=(req,res)=>{
     })
 }
 userLogin=(req,res)=>{
+    console.log(req.body)
     validator=''
     if(req.body.email=='' || req.body.email==undefined){
         validator+='valid email is required'
