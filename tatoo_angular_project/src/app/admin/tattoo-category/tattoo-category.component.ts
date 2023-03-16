@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { TatooCategoryService } from 'src/app/shared/tatooCategory/tatoo-category.service';
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-tattoo-category',
   templateUrl: './tattoo-category.component.html',
@@ -25,6 +25,7 @@ upload(event:any){
   // if(event.target.files.length>0){
     this.tattoo_image=event.target.files[0]
   // }
+  console.log(this.tattoo_image)
 }
 tattoo_type:any
 
