@@ -26,14 +26,12 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/bootstrap.min.css",
               "src/assets/css/style.css",
               "src/assets/css/prettyPhoto.css",
               "src/assets/css/responsive.css",
-              "src/assets/css/animate.css",
-              "node_modules/ngx-toastr/toastr.css"
-           
-              
-           
+              "src/assets/css/animate.css"
             ],
             "scripts": [
               "src/assets/js/jquery-1.11.1.min.js",
@@ -105,13 +103,12 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/bootstrap.min.css",
               "src/assets/css/style.css",
               "src/assets/css/prettyPhoto.css",
               "src/assets/css/responsive.css",
-              "src/assets/css/animate.css",
-              "node_modules/ngx-toastr/toastr.css"
-          
-           
+              "src/assets/css/animate.css"
           
             ],
             "scripts": [
@@ -123,6 +120,7 @@
               "src/assets/js/retina.js",
               "src/assets/js/jquery.prettyPhoto.js",
               "src/assets/js/wow.min.js"
+            
             ]
           }
         }

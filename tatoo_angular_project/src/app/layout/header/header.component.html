@@ -1,28 +1,40 @@
+<!-- <header id="header"> 
 
-<header id="header"> <!-- Header Part -->
 			
-    <!-- this is dummy heading for W3-Validation approval you can remove it if you want -->
-    <h2 class="w3-validation">For W3 Validation</h2>
-    <!-- this is dummy heading for W3-Validation approval you can remove it if you want -->
+   
     
             <div class="header">
                 <div class="container">
-                        <!-- start-top-nav -->
+                       
                         <div class="top-nav">
                             <div class="top-header">
                                 <div class="responsive-logo">
-                                   <a href="index.html"><img src="src/assets/images/logo.png" alt=""/></a>
+                                   <a href="index.html"><img src="/src/assets/images/about-us-background.jpg" alt=""/></a>
                                 </div>
                             </div>
                             <nav class="nav">
                                 <a id="menu-toggle" class="anchor-link" href="#"><img src="src/assets/images/nav.png" alt="" /></a>
                                 <ul class="nav-list" id="menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#about" class="scroll">About</a></li>
+                                    <li class="bg-danger" ><a href="#">Home</a></li>
+                                   
+                                    <li>
+                                        <div class="btn-group">
+                                          <button type="button" routerLink="/layout/addTattoCategory" class="btn btn-dark">Tattoo Category</button>
+                                          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"> Add Tattoo Category</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                          </ul>
+                                        </div></li>
                                     <li><a href="#gallery" class="scroll">Gallery</a></li>
-                                    <!-- logo -->
+                                 
                                      <li class="logo"><a href="index.html"><img src="images/logo.png" alt=""/></a></li>
-                                    <!-- logo -->
+                               
                                     <li><a href="#faq" class="scroll">Faq</a></li>
                                     <li><a href="#find" class="scroll">Find Us</a></li>
                                     <li><a href="#contact" class="scroll">Contact</a></li>
@@ -39,7 +51,62 @@
                                 });
                             </script>
                         </div>
-                    <!-- End-top-nav -->
+                   
                 </div>
             </div>
-    </header>
+    </header> -->
+<header id="header">
+    <div class="header">
+        <div class="container">
+            <div class="top-nav">
+                <div class="top-header">
+                    <div class="responsive-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <nav class="nav  d-flex justify-content-center ">
+                    <a id="menu-toggle" class="anchor-link" href="#"><img src="images/nav.png" alt="" /></a>
+                    <ul class="nav-list" id="menu">
+                        <li class=""><a href="#">Home</a></li>
+                        <li>
+                            <!-- Example split danger button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger">Tattoo Category</button>
+                                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" routerLink="/layout/addTattooCategory">Add Tattoo Category</a></li>
+                                    <li><a class="dropdown-item" routerLink="/layout/allTattooCategory">All Tattoo Category</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li><a href="#about" class="scroll">About</a></li> -->
+                        <li><a href="#gallery" class="scroll">Gallery</a></li>
+                        <li class="logo"><a href="index.html"><img src="images/logo.png" alt="" /></a></li>
+                        <li><a href="#faq" class="scroll">Faq</a></li>
+                        <li><a href="#find" class="scroll">Find Us</a></li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
+                    </ul>
+                </nav>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+                        $('#menu-toggle').click(function () {
+                            $('#menu').toggleClass('open');
+                            e.preventDefault();
+                        });
+
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</header>

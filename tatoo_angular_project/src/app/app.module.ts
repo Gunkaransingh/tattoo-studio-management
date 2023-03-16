@@ -15,6 +15,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { TattooCategoryComponent } from './admin/tattoo-category/tattoo-category.component';
+import { AlltattooCategoryComponent } from './admin/alltattoo-category/alltattoo-category.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     SidebarComponent,
     GalleryComponent,
     ContactComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    TattooCategoryComponent,
+    AlltattooCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), 
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

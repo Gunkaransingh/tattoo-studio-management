@@ -14,6 +14,10 @@ token:any
    }
   addTattooCategory(form:any){
     var header_object=new HttpHeaders().set('Authorization',this.token)
-    this.http.post(this.baseurl+'/admin/addTattoosCategory',form,{headers:header_object})
+   return this.http.post(this.baseurl+'/admin/addTattoosCategory',form,{headers:header_object})
+  }
+  allTattoo_category(id:any){
+    var header_object=new HttpHeaders().set('Authorization',this.token)
+    return this.http.post(this.baseurl+'admin/viewAllTattoosCategory',id,{headers:header_object})
   }
 }
