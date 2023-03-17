@@ -13,6 +13,7 @@ token:any
     this.token=this.auth.getToken()
    }
   addTattooCategory(form:any){
+    // console.log("this.token",this.token)
     var header_object=new HttpHeaders().set('Authorization',this.token)
    return this.http.post(this.baseurl+'/admin/addTattoosCategory',form,{headers:header_object})
   }

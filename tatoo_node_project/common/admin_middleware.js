@@ -1,12 +1,13 @@
 const jwt=require('jsonwebtoken')
 module.exports=(req,res,next)=>{
     const token=req.headers['authorization']
+    // console.log("token", token)
     if(token){
         jwt.verify(token,'tattoos_project',function(err,decoded){
             if(err){
                 return res.json({
                     'status':false,
-                    'message':'Unauthorized Access'
+                    'message':'Unauthorized Access 1'
                 })
             }
             req.decoded=decoded
@@ -14,9 +15,9 @@ module.exports=(req,res,next)=>{
                 next()
             }
             else{
-                res.json({
+              return  res.json({
                     'status':false,
-                    'message':'Unathorized'
+                    'message':'Unathorized error 2'
                 })
             }
         })

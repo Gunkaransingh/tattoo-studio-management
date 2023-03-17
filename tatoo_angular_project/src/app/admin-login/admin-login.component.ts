@@ -23,9 +23,10 @@ export class AdminLoginComponent implements OnInit {
     this.adminservices.login(this.adminLoginForm.value).subscribe(
       (res:any)=>{
       if(res.success){
+        this.auth.setEmail(res)
         this.toastr.success('success',res.message)
         this.router.navigateByUrl('/layout')
-      console.log(res.success)
+      // console.log(res.token)
       }
       else{
       this.toastr.error('error',res.message)

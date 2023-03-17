@@ -22,26 +22,31 @@ constructor(private tattooservices:TatooCategoryService, private taostr:ToastrSe
 }
 tattoo_image:any
 upload(event:any){
-  // if(event.target.files.length>0){
+
+  if(event.target.files.length>0){
     this.tattoo_image=event.target.files[0]
-  // }
-  console.log(this.tattoo_image)
+  }
+  console.log(event.target.files[0])
 }
 tattoo_type:any
 
-submit(){
-this.tattoo_type=this.addTattooCategoryform.value
 
-const d =new FormData()
+submit(){
+this.tattoo_type=this.addTattooCategoryform.value.tattoo_type
+console.log("this.tattoo_type",this.tattoo_type)
+console.log("this.tattoo_image",this.tattoo_image)
+let d =new FormData()
+d.append('tattoo_type',this.addTattooCategoryform.value.tattoo_type!)
+// d.append('tattoo_type',this.tattoo_type)
 d.append('tattoo_image',this.tattoo_image)
-d.append('tattoo_type',this.tattoo_type)
-console.log(this.tattoo_type)
-console.log(this.tattoo_image)
+console.log("data",JSON.stringify(d.get("tattoo_type")))
 this.tattooservices.addTattooCategory(d).subscribe({
   next:(res:any)=>{
     if(res.success){
       this.taostr.success('success',res.message)
+      console.log(this.taostr)
     }
+   
     else{
       this.taostr.error('error',res.message)
     }

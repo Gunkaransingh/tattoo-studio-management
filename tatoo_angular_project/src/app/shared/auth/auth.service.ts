@@ -11,11 +11,13 @@ export class AuthService {
     localStorage.setItem('token',data.token)
   }
 
+
   getEmail(){
     return localStorage.getItem('email')
   }
   getToken(){
     return localStorage.getItem('token')
+   
   }
   removeEmail(){
      localStorage.removeItem('email')
