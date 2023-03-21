@@ -1,0 +1,1244 @@
+{
+	"info": {
+		"_postman_id": "28e839be-8814-4edb-ab51-bacf1e8cd2eb",
+		"name": "tattoo services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22989774"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "tattoo category",
+					"item": [
+						{
+							"name": "add tattoos category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl90eXBlIjoxLCJpYXQiOjE2NzkwMzU3MTAsImV4cCI6MTY3OTAzNzUxMH0.N0FUB-brQ1B92ia-vuXFgOiAQbR0wOTsLuromrMHEzc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "tattoo_type",
+											"value": "colored tatooo",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/vaisakhi slider.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTattoosCategory",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTattoosCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all tattoos category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl90eXBlIjoxLCJpYXQiOjE2NzkwMzgyNTQsImV4cCI6MTY3OTA0MDA1NH0.7mI2JJu01D1gQWdQiR2wU24-H-vNWrHMa4bg9Dp7QOo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllTattoosCategory",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllTattoosCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view tattoos category by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ff52b2fa2b0a68448ccbd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTattoosCategoryById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTattoosCategoryById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "udpated tattoos category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "tattoo_type",
+											"value": "symbols",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "640ff7ceb873460824f95c40",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/22890167_6720453.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTattoosCategory",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTattoosCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change tattoos category status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ff52b2fa2b0a68448ccbd",
+											"type": "text"
+										},
+										{
+											"key": "category_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeTattoosCategoryStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeTattoosCategoryStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gallery",
+					"item": [
+						{
+							"name": "add gallery",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "tattoo_id",
+											"value": "640ff52b2fa2b0a68448ccbd",
+											"type": "text"
+										},
+										{
+											"key": "gallery_name",
+											"value": " animals photo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addGallery",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addGallery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all gallery",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "tattoo_id",
+											"value": "640ff7ceb873460824f95c40",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllGallery",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllGallery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view gallery by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ffc6cfa398fe0121af739",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewGalleryById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewGalleryById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update gallery",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "tattoo_id",
+											"value": "640ff7ceb873460824f95c40",
+											"type": "text"
+										},
+										{
+											"key": "gallery_name",
+											"value": "animal category tattoos",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "640ffc6cfa398fe0121af739",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateGallery",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateGallery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change gallery status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ffc9bfa398fe0121af73f",
+											"type": "text"
+										},
+										{
+											"key": "gallery_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/galleryStatuschange",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"galleryStatuschange"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tattoo pricing",
+					"item": [
+						{
+							"name": "add tattoo pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "tattoo_id",
+											"value": "640ff52b2fa2b0a68448ccbd",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_price",
+											"value": "2000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTattooPricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTattooPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view All Tattoo Pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllTattooPricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllTattooPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Tattoo Pricing ById",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640fff1405d16504e8d6fd76",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTattooPricingById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTattooPricingById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Tattoo Pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "tattoo_id",
+											"value": "640e9d0109ca0bb5e26fd23f",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_price",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "640ffd1afa398fe0121af74b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTattooPricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTattooPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Pricing Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ffd1afa398fe0121af74b",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_price_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changePricingStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changePricingStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reviews",
+					"item": [
+						{
+							"name": "view All Review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllReview",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllReview"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view reviews by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ea4902559b1af425d302a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/veiwReviewById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"veiwReviewById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Review Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ea4902559b1af425d302a",
+											"type": "text"
+										},
+										{
+											"key": "review_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeReviewStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeReviewStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "view All Booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllBooking",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view booking by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ea83b5c912acf162300d5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewBookingById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewBookingById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change booking status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ea8315c912acf162300d3",
+											"type": "text"
+										},
+										{
+											"key": "booking_status",
+											"value": "approved",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeBookingStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeBookingStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "common",
+					"item": [
+						{
+							"name": "admin login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/adminLogin",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"adminLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "customer login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gunkaran@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/userLogin",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"userLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "add Booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "gunkaran",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "gunkaran@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "contact",
+											"value": "9998888877",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "abc nagarrr",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "jal",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sample_design",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/IMG_4567.jpeg"
+										},
+										{
+											"key": "user_id",
+											"value": "640ea40e51f026ac7e437872",
+											"type": "text"
+										},
+										{
+											"key": "pricing_id",
+											"value": "640ea25aaa1a8ba5f1424fa9",
+											"type": "text"
+										},
+										{
+											"key": "booking_date",
+											"value": "15-03-2023",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/addBooking",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"addBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view All Booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllBooking",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view booking by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ea83b5c912acf162300d5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewBookingById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewBookingById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "vishal@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "abc nagar",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "shimla",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "998877654",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "vishal",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/userRegister",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"userRegister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gunkaran@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/userLogin",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"userLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reviews",
+					"item": [
+						{
+							"name": "add reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "640ea40e51f026ac7e437872",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_pricingid",
+											"value": "640ffd1afa398fe0121af74b",
+											"type": "text"
+										},
+										{
+											"key": "review",
+											"value": "good  tattoo ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/addReviews",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"addReviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view All Review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllReview",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllReview"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view reviews by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ffd9077306105aa562e8c",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/veiwReviewById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"veiwReviewById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "640ea4532559b1af425d3027",
+											"type": "text"
+										},
+										{
+											"key": "tattoo_pricingid",
+											"value": "640ffd1afa398fe0121af74b",
+											"type": "text"
+										},
+										{
+											"key": "review",
+											"value": "awsome animal tattoo ",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "640ea4902559b1af425d302a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/updateReview",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"updateReview"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tattoo category",
+					"item": [
+						{
+							"name": "view all tattoos category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTattoosCategory",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTattoosCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view tattoos category by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ff52b2fa2b0a68448ccbd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTattoosCategoryById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTattoosCategoryById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gallery",
+					"item": [
+						{
+							"name": "view all gallery",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllGallery",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllGallery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view gallery by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640ffc9bfa398fe0121af73f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewGalleryById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewGalleryById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pricing",
+					"item": [
+						{
+							"name": "view All Tattoo Pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTattooPricing",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTattooPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Tattoo Pricing By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640fff1405d16504e8d6fd76",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTattooPricingById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTattooPricingById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "server check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}check",
+					"host": [
+						"{{baseurl}}check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
