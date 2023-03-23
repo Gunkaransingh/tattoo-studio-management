@@ -5,6 +5,8 @@ const tattooPricingController=require('../apis/tattoo_pricing/tattoo_pricingCont
 const ReviewController=require('../apis/reviews/reviewsController')
 const BookingController=require('../apis/booking/bookingController')
 const UserController=require('../apis/user/userController')
+const ProductController=require('../apis/product/productController')
+const AddCartController=require('../apis/addCart/addCartController')
 const multer = require('multer')
 const path = require('path')
 
@@ -42,6 +44,7 @@ router.post('/viewTattoosCategoryById',tattooCategoryController.viewTattoosCateg
 router.post('/updateTattoosCategory',tattoosUpload.single('tattoo_image'),tattooCategoryController.updateTattoosCategory)
 router.post('/changeTattoosCategoryStatus',tattooCategoryController.changeTattoosCategoryStatus)
 
+
 // tattoo category routes in admin panel ends 
 
 
@@ -71,4 +74,13 @@ router.post('/changeReviewStatus',ReviewController.changeReviewStatus)
 router.post('/viewAllBooking',BookingController.viewAllBooking)
 router.post('/viewBookingById',BookingController.viewBookingById)
 router.post('/changeBookingStatus',BookingController.changeBookingStatus)
+// booking routes inadmin panel ends 
+
+
+// product routes starts 
+router.post('/addProduct',ProductController.addProduct)
+// product routes endes 
+
+// add cart starts 
+router.post('/addCart',AddCartController.addCart)
 module.exports = router
