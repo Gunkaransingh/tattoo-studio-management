@@ -10,14 +10,18 @@ addCart = (req, res) => {
 
     let add_cart = new AddCart(cart_data)
     let cart_size = cart_data.cart_items.length
+    // console.log(cart_data.cart_items.length)
+    
 
     for (i = 0; i < cart_size; i++) {
         let amount = 0
         amount = Number(cart_data.cart_items[i].price)
         product_id=cart_data.cart_items[i].product_id
         quantity=cart_data.cart_items[i].quantity
-        add_cart.total_price+=amount * quantity
+        add_cart.total_price=amount * quantity
+        // console.log(add_cart.total_price)
     }
+    return
     add_cart.save()
     .then(cartdata=>{
         res.json({
