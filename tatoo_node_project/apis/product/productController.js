@@ -11,13 +11,14 @@ addProduct=(req,res)=>{
             'message':'product added successfully',
             'data':productData
         })
-        .catch(err=>{
-            res.json({
-                'status':409,
-                'success':false,
-                'message':'product not added',
-                'error':String(err)
-            })
+      
+    })
+     .catch(err=>{
+        res.json({
+            'status':409,
+            'success':false,
+            'message':'product not added',
+            'error':String(err)
         })
     })
 }

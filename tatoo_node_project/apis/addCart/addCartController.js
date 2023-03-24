@@ -20,7 +20,7 @@ addCart = (req, res) => {
         add_cart.total_price+=amount * quantity
          console.log(add_cart.total_price)
     }
-    
+    return
     add_cart.save()
     .then(cartdata=>{
         res.json({
