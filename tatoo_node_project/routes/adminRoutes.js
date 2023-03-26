@@ -78,9 +78,9 @@ router.post('/changeBookingStatus',BookingController.changeBookingStatus)
 
 
 // product routes starts 
-router.post('/addProduct',ProductController.addProduct)
+// router.post('/addProduct',ProductController.addProduct)
 // product routes endes 
 
 // add cart starts 
-router.post('/addCart',AddCartController.addCart)
+// router.post('/addCart',AddCartController.addCart)
 module.exports = router
